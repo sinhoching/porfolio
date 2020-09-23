@@ -2,8 +2,8 @@
 /* MENU STYLES */
 .menu-wrap {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 15px;
   z-index: 2;
 }
 
@@ -17,6 +17,45 @@
   z-index: 1;
   font-family: 'bebas neue';
 }
+
+/*Hamburger style*/
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: white;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.hamLine .top {
+  stroke-dasharray: 40 121;
+}
+.hamLine .bottom {
+  stroke-dasharray: 40 121;
+}
+.hamLine.active .top {
+  stroke-dashoffset: -68px;
+}
+.hamLine.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
 /* Show Menu */
 .menu-wrap .active ~ .menu {
   visibility: visible;
