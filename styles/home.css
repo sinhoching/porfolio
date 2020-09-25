@@ -1,0 +1,112 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+/*name style*/
+.name-wrap {
+  display:inline-block;
+  overflow:hidden;
+  font-family: 'bebas neue';
+  font-size: 12em;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.name-wrap div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+#v, #s { 
+  margin-right: -30px;
+  animation: showup 12s infinite;
+}
+#ictoria, #in{
+  width:0px;
+  animation: reveal 12s infinite;
+}
+
+#ictoria, #in {
+  margin-left:85px;
+  animation: slidein 12s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; opacity: 0;; }
+    20% { margin-left:0px; opacity: 0; }
+    30% { margin-left:0px; opacity: 1;}
+    80% {margin-left:0px; opacity:1;}
+    100% { margin-left:0px;  opacity:0;}
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:0;width:0px;}
+    30% {opacity:1;width:85px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:85px;}
+}
+
+/*arrow style*/
+.arrow {
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 20px;
+  margin: 0;
+  position: absolute;
+  top: 48%;
+  left: 92%;
+}
+
+.right {
+  transform: rotate(-45deg);
+  display: inline-block;
+  vertical-align: middle;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.right:hover, .right:focus, .right:active {
+  transform: translateX(8px) rotate(-45deg);
+
+}
+
+
+
+
+@media(max-width:1020px) {
+  #name {
+    font-size: 9em;
+  }
+
+  .arrow {
+    padding: 14px;
+    top: 49%;
+  }
+}
+
+@media(max-width:750px) {
+  #name {
+    font-size: 5em;
+  }
+
+  .arrow {
+    padding: 12px;
+  }
+}
+
